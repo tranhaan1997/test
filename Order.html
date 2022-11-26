@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <title>Buronos Pizzeria</title> 
+  <meta charset="utf-8" /> 
+  <meta name="description" content="Assi 2" > 
+  <meta name="keywords"    content="HTML,CSS,JavaScript" > 
+  <meta name="author"      content="Tran Ha Long" >
+  <link rel="stylesheet" href="CSS/style.css">
+  <script type="text/javascript" src="js/script.js"></script>
+</head>
+<header class="Heading3">
+    <h1>Order</h1>
+</header>
+<nav class = "menu_top2">
+  <a class="navigator" href="index.html">Home</a>
+  <a class="navigator" href="register.html">Registration</a>
+  <a class="navigator" href="Order.html">Order</a>
+  <a class="navigator" href="features.html">features</a>
+</nav>
+<!-- <body> -->
+  <form method="post" name="Form" onsubmit="return validatePass()" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+    <div class="form2">
+    <h1>Filling</h1>
+    <!-- Delivery method -->
+    <label for="choose">Delivery method:</label>
+              <select name="pick" id="choose" onSubmit="return validatePass()" onchange="if (this.value=='Delivery'){this.form['Delivery'].style.visibility='visible'}else {this.form['Delivery'].style.visibility='hidden'};">
+                <option value="" selected="selected">Select...</option>
+                <option value="Pick Up">Pick Up</option>
+                <option value="Delivery">Delivery</option>
+              </select>
+              <!-- <p> -->
+                <div id="Delivery" class="showdeli" style="display:none">
+                  <!-- Delivery address -->
+                  Delivery Address: <input type="text" name="Delivery" id="Delivery"/>
+                </div>
+              <!-- </p> -->
+              <p>
+                <!-- Billing address -->
+                <label for="ba">Billing address:</label>
+                <input type="text" name="ba" id="ba"/>
+              </p>
+              <p>
+                <!-- Contact number -->
+                <label for="cn">Contact number:</label>
+                <input type="text" name="cn" id="cn" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required placeholder="10number"/>
+              </p>
+              <p>
+                <!-- <label for="pc">Postcode:</label>
+                <input type="text" name="pc" id="pc"/> -->
+                <!-- <input type="number" name="pc"/> -->
+                <!-- Post code -->
+                <label for="digit">Postcode:</label>
+                <input type="number" id="digit" name="digit" min="1000" max="9999">
+              </p>
+              <p>
+                <!-- Email section -->
+                <label for="efr">Email for receipt:</label>
+                <input type="text" name="efr" id="efr" placeholder="abcxyz@gmail.com"/>
+              </p>
+              <!-- Payment -->
+    <label for="pick">Choose payment method:</label>
+              <select name="pay" id="pick" onchange="if (this.value=='Online'){this.form['Online'].style.visibility='visible'}else {this.form['Online'].style.visibility='hidden'};">
+                <option value="" selected="selected">Select...</option>
+                <option value="Pay on Pickup">Pay on pickup</option>
+                <option value="Online">Online</option>
+              </select>
+              <!-- <p> -->
+                <!-- Credit card -->
+              <div>
+                <p>Credit Card Information:</p>
+              </div>
+              <input type="text" name="Online" style="visibility:hidden;"/>
+              <br>
+              <!-- submit button -->
+              <!-- </p> -->
+            <button type="submit" value="Submit" class="button">Submit</button>
+            <button type="reset" value="Reset" class="button">Reset</button>
+    </div>
+  </form>
+<!-- </body> -->
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8" /> 
+  <meta name="description" content="Assi 2" > 
+  <meta name="keywords"    content="HTML,CSS,JavaScript" > 
+  <meta name="author"      content="Tran Ha Long" >
+  <title>Buronos Pizzeria</title> 
+  <link rel="stylesheet" href="CSS/style.css">
+  <script type="text/javascript" src="js/script.js"></script>
+</head>
+<header class="Heading1">
+    <h1>Registration</h1>
+</header>
+<nav class = "menu_top1">
+    <a class="navigator" href="index.html">Home</a>
+    <a class="navigator" href="register.html">Registration</a>
+    <a class="navigator" href="Order.html">Order</a>
+</nav>
+    <!-- <body> -->
+        <!-- Register form -->
+        <form method="post" name="Form" onsubmit="return validateForm()" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+            <div class="form">    
+                <h2>Account Information</h2>
+                <!-- The User ID section -->
+                <p>
+                    <label for="sid">User ID:</label>
+                    <input type="text" name="sid" id="sid" placeholder="e.g:123"/>
+                </p>
+                <!-- The password section -->
+                <p>
+                    <label for="pwd1">Password:</label>
+                    <input type="password" name="pwd1" id="pwd1" placeholder="12345678" />
+                </p>
+                <!-- The retype password section -->
+                <p>
+                    <label for="pwd2">Retype Password:</label>
+                    <input type="password" name="pwd2" id="pwd2" placeholder="12345678" />
+                </p>
+                <h2>User Information</h2>
+                <!-- The name section -->
+                <p>
+                    <label for="username">Name:</label>
+                    <input type="text" name="username" id="username" placeholder="abc"/>
+                </p>
+                <!-- The gender section -->
+                <fieldset class="gender">
+                    <legend>Gender</legend>
+                    <input type="radio" name="gender" value="M" id="genderM" />
+                    <label for="genderM">Male</label>
+                    <!-- <input type="radio" name="gender" value="M" id="genderM" /> -->
+                    <input type="radio" name="gender" value="F" id="genderF" />
+                    <label for="genderF">Female</label>
+                    <!-- <input type="radio" name="gender" value="F" id="genderF" /> -->
+                </fieldset>
+                <!-- The checkbox choosing pizza section -->
+                <fieldset>
+                    <legend>Favourite pizzas</legend>
+                    <input type="checkbox" name="pizza" value="Frutti Di Mare" id="pizza1"/>
+                    <label for="pizza1">Frutti Di Mare</label>
+                    <!-- <input type="checkbox" name="pizza" value="Frutti Di Mare"/> -->
+                    <input type="checkbox" name="pizza" value="Margherita" id="pizza2"/>
+                    <label for="pizza2">Margherita</label>
+                    <!-- <input type="checkbox" name="pizza" value="Margherita"/> -->
+                    <input type="checkbox" name="pizza" value="Napoletana" id="pizza3"/>
+                    <label for="pizza3">Napoletana</label>
+                    <!-- <input type="checkbox" name="pizza" value="Napoletana"/> -->
+                    <input type="checkbox" name="pizza" value="Americana" id="pizza4"/>
+                    <label for="pizza4">Americana</label>
+                    <!-- <input type="checkbox" name="pizza" value="Americana"/> -->
+                </fieldset>
+                <!-- The checklist -->
+                <label for="regions">Choose a region:</label>
+                <select name="regions" id="regions">
+                    <option value="Europe">Europe</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="USA">USA</option>
+                </select>
+                <br>
+                <button type="submit" value="Submit" class="button">Submit</button>
+                <button type="reset" value="Reset" class="button">Reset</button>
+            </div>    
+        </form>
+    <!-- </body> -->
+</html>
